@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shivam Kumar – CSE Student, Web Developer & Programmer at Lovely Professional University. Explore my projects, skills, and certifications." />
+  <title>Shivam Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-text">SK</div>
+    </div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-dot"></span>Shivam<span class="brand-accent">Kumar</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Certificates</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Shivam Kumar</h1>
+        <div class="hero-typing-wrap">
+          <span class="typing-prefix">I'm a </span>
+          <span id="typed-text" class="typed-text"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-college"><i class="fas fa-university"></i> Lovely Professional University, Punjab</p>
+        <p class="hero-badge"><i class="fas fa-graduation-cap"></i> B.Tech CSE · 1st Year · CGPA: 7.89</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+          <a href="images/dream cv.png" download class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-glow"></div>
+          <img src="images/cv_dp.png" alt="Shivam Kumar" class="avatar-img" />
+        </div>
+        <div class="avatar-badge">
+          <span class="badge-dot"></span> Available for Internship
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who <span class="gradient-text">I Am</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text glass-card reveal">
+          <p>I am a passionate <strong>Computer Science student</strong> at Lovely Professional University with strong interest in <strong>web development</strong>, <strong>programming</strong>, and <strong>cybersecurity</strong>. I enjoy building innovative solutions and exploring real-world applications of technology.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">7.89</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">6+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-stack glass-card reveal">
+          <h3>Tech Stack</h3>
+          <div class="tech-icons">
+            <div class="tech-icon" data-tip="HTML5"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML</span></div>
+            <div class="tech-icon" data-tip="CSS3"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS</span></div>
+            <div class="tech-icon" data-tip="JavaScript"><i class="fab fa-js-square" style="color:#f7df1e"></i><span>JS</span></div>
+            <div class="tech-icon" data-tip="Python"><i class="fab fa-python" style="color:#3776ab"></i><span>Python</span></div>
+            <div class="tech-icon" data-tip="C Language"><i class="fas fa-code" style="color:#a8b2ff"></i><span>C</span></div>
+            <div class="tech-icon" data-tip="Database"><i class="fas fa-database" style="color:#ff6b9d"></i><span>DBMS</span></div>
+            <div class="tech-icon" data-tip="Cybersecurity"><i class="fas fa-shield-halved" style="color:#00f5a0"></i><span>CyberSec</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Expertise</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiency</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <div>
+              <span class="skill-name">HTML5</span>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="85" style="--clr:#e34f26"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <div>
+              <span class="skill-name">CSS3</span>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="80" style="--clr:#1572b6"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+            <div>
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="70" style="--clr:#f7df1e"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <div>
+              <span class="skill-name">Python</span>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="75" style="--clr:#3776ab"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <span class="skill-name">C Language</span>
+              <span class="skill-percent">72%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="72" style="--clr:#a8b2ff"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <div>
+              <span class="skill-name">DBMS</span>
+              <span class="skill-percent">65%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="65" style="--clr:#ff6b9d"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
+            <div>
+              <span class="skill-name">Cybersecurity</span>
+              <span class="skill-percent">60%</span>
+            </div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" data-width="60" style="--clr:#00f5a0"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Featured Project -->
+        <div class="project-card featured glass-card reveal">
+          <div class="project-featured-badge"><i class="fas fa-star"></i> Featured</div>
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-person-walking"></i></div>
+            <div class="project-tags">
+              <span class="tag">IoT</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">Embedded</span>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Posture Correction Belt</h3>
+          <p class="project-desc">A wearable IoT-based device equipped with sensors that detects slouching and provides real-time haptic feedback (vibration) to maintain proper spinal alignment.</p>
+          <div class="project-images">
+            <img src="images/P1.jpg" alt="Posture Belt Preview" />
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-globe"></i></div>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <h3 class="project-title">Personal Portfolio Website</h3>
+          <p class="project-desc">A fully responsive, modern portfolio website featuring glassmorphism design, dark neon theme, scroll animations, and interactive elements built with vanilla web technologies.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Security</span>
+              <span class="tag">Networking</span>
+            </div>
+          </div>
+          <h3 class="project-title">Network Intrusion Scanner</h3>
+          <p class="project-desc">A Python-based cybersecurity tool that scans local network traffic for anomalies, identifies potential intrusions, and generates real-time security alerts and reports.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Recognition</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+      </div>
+      <!-- CGPA card top row -->
+      <div class="achieve-top reveal">
+        <div class="achieve-card glass-card">
+          <div class="achieve-icon"><i class="fas fa-medal"></i></div>
+          <h3>Academic Excellence</h3>
+          <p class="achieve-val">7.89 CGPA</p>
+          <p>B.Tech CSE · Semester 2 · Lovely Professional University</p>
+        </div>
+        <div class="achieve-card glass-card">
+          <div class="achieve-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fas fa-certificate"></i></div>
+          <h3>Total Certifications</h3>
+          <p class="achieve-val">6</p>
+          <p>Infosys, MOOC &amp; Udemy Platforms</p>
+        </div>
+        <div class="achieve-card glass-card">
+          <div class="achieve-icon" style="background:linear-gradient(135deg,#10b981,#06b6d4)"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Academic Year</h3>
+          <p class="achieve-val">2025</p>
+          <p>1st Year · 2nd Semester · LPU Punjab</p>
+        </div>
+      </div>
+
+      <!-- Certificate Cards -->
+      <h3 class="cert-section-heading reveal"><i class="fas fa-award"></i> My Certificates</h3>
+
+      <div class="cert-carousel reveal" id="cert-carousel">
+        <div class="cert-track" id="cert-track">
+
+          <!-- Cert 1: HTML5 – Infosys Springboard -->
+          <div class="cert-img-card" data-title="HTML5 – The Language" data-issuer="Infosys Springboard" data-date="May 2026">
+            <div class="cert-img-wrap">
+              <img src="images/cert_html.png" alt="HTML5 Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fab fa-html5" style="color:#e34f26"></i> HTML5 – The Language</h4>
+              <p>Infosys Springboard · May 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+          </div>
+
+          <!-- Cert 2: CSS3 – Infosys Springboard -->
+          <div class="cert-img-card" data-title="CSS3 – Styling" data-issuer="Infosys Springboard" data-date="May 2026">
+            <div class="cert-img-wrap">
+              <img src="images/cert_css.png" alt="CSS3 Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fab fa-css3-alt" style="color:#1572b6"></i> CSS3 – Styling</h4>
+              <p>Infosys Springboard · May 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+          </div>
+
+          <!-- Cert 3: JavaScript – Infosys Springboard -->
+          <div class="cert-img-card" data-title="JavaScript – Programming" data-issuer="Infosys Springboard" data-date="May 2026">
+            <div class="cert-img-wrap">
+              <img src="images/cert_javascript.png" alt="JavaScript Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fab fa-js-square" style="color:#f7df1e"></i> JavaScript – Programming</h4>
+              <p>Infosys Springboard · May 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+          </div>
+
+          <!-- Cert 4: Cyber Security – Infosys -->
+          <div class="cert-img-card" data-title="Intro to Cyber Security" data-issuer="Infosys Springboard" data-date="April 2026">
+            <div class="cert-img-wrap">
+              <img src="images/mooc_cyber_security.png" alt="Cyber Security Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fas fa-shield-halved" style="color:#7c3aed"></i> Intro to Cyber Security</h4>
+              <p>Infosys Springboard · April 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Python – Infosys -->
+          <div class="cert-img-card" data-title="Introduction to Python" data-issuer="Infosys Springboard" data-date="Feb 2026">
+            <div class="cert-img-wrap">
+              <img src="images/mooc_python_infosys.png" alt="Python Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fab fa-python" style="color:#3b82f6"></i> Introduction to Python</h4>
+              <p>Infosys Springboard · Feb 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Verified</span></p>
+            </div>
+          </div>
+
+          <!-- Cert 6: Anger Management – MOOC -->
+          <div class="cert-img-card" data-title="Anger Management" data-issuer="MOOC Platform" data-date="2026">
+            <div class="cert-img-wrap">
+              <img src="images/mooc_anger.png" alt="Anger Management Certificate" class="cert-media" />
+              <div class="cert-img-overlay">
+                <i class="fas fa-expand"></i>
+              </div>
+            </div>
+            <div class="cert-img-info">
+              <h4><i class="fas fa-brain" style="color:#10b981"></i> Anger Management</h4>
+              <p>MOOC Platform · 2026 · <span class="cert-verified-tag"><i class="fas fa-check-circle"></i> Completed</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Fullscreen Slideshow Modal -->
+      <div class="cert-modal" id="cert-modal">
+        <button class="cert-modal-close" id="cert-modal-close"><i class="fas fa-times"></i></button>
+        <button class="cert-modal-nav cert-modal-prev" id="cert-modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="cert-modal-content" id="cert-modal-content"></div>
+        <button class="cert-modal-nav cert-modal-next" id="cert-modal-next"><i class="fas fa-chevron-right"></i></button>
+        <div class="cert-modal-caption" id="cert-modal-caption"></div>
+        <div class="cert-modal-counter" id="cert-modal-counter"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume / CV Section -->
+  <section id="resume" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My CV</span>
+        <h2 class="section-title">Resume &amp; <span class="gradient-text">CV</span></h2>
+      </div>
+      <div class="resume-wrapper reveal">
+        <div class="resume-card glass-card">
+          <div class="resume-left">
+            <div class="resume-icon"><i class="fas fa-file-pdf"></i></div>
+            <div class="resume-info">
+              <h3>Shivam Kumar – Resume</h3>
+              <p>B.Tech CSE · Lovely Professional University · 2025</p>
+              <div class="resume-badges">
+                <span><i class="fas fa-check-circle"></i> Up to date</span>
+                <span><i class="fas fa-file-alt"></i> PDF Format</span>
+              </div>
+            </div>
+          </div>
+          <div class="resume-actions">
+            <button class="btn btn-primary" onclick="openCVModal()"><i class="fas fa-eye"></i> Preview CV</button>
+            <a href="images/dream cv.png" download="Shivam_Kumar_CV" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV Preview Modal -->
+  <div id="cv-modal" class="cv-modal" onclick="closeCVModal(event)">
+    <div class="cv-modal-inner">
+      <button class="cv-modal-close" onclick="closeCVModal()"><i class="fas fa-times"></i></button>
+      <img src="images/dream_cv.png" alt="Shivam Kumar CV" class="cv-preview-img" />
+      <a href="images/dream_cv.png" download="Shivam_Kumar_CV" class="btn btn-primary cv-dl-btn"><i class="fas fa-download"></i> Download CV</a>
+    </div>
+  </div>
+
+  <!-- Live Features Section -->
+  <section id="live" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Live Data</span>
+        <h2 class="section-title">GitHub &amp; <span class="gradient-text">Activity</span></h2>
+      </div>
+      <div class="live-grid">
+        <div class="live-card glass-card reveal">
+          <div class="live-card-header"><i class="fab fa-github"></i> GitHub Stats</div>
+          <div class="github-stats">
+            <div class="gh-stat"><span class="gh-num">12</span><span class="gh-label">Repos</span></div>
+            <div class="gh-stat"><span class="gh-num">47</span><span class="gh-label">Commits</span></div>
+            <div class="gh-stat"><span class="gh-num">5</span><span class="gh-label">Stars</span></div>
+            <div class="gh-stat"><span class="gh-num">3</span><span class="gh-label">Followers</span></div>
+          </div>
+          <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline" style="margin-top:1rem;"><i class="fab fa-github"></i> View Profile</a>
+        </div>
+        <div class="live-card glass-card reveal">
+          <div class="live-card-header"><i class="fas fa-eye"></i> Visitor Counter</div>
+          <div class="visitor-count">
+            <div class="vc-display" id="visitor-count">0</div>
+            <p>Total Visitors</p>
+          </div>
+        </div>
+        <div class="live-card glass-card reveal">
+          <div class="live-card-header"><i class="fas fa-code-branch"></i> Current Focus</div>
+          <ul class="focus-list">
+            <li><i class="fas fa-check-circle"></i> Learning React.js</li>
+            <li><i class="fas fa-check-circle"></i> DSA with Python</li>
+            <li><i class="fas fa-check-circle"></i> Cybersecurity Basics</li>
+            <li><i class="fas fa-spinner fa-spin"></i> Open Source Contributions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Build Something Together</h3>
+          <p>I'm open to internship opportunities, collaborations, and freelance projects. Don't hesitate to reach out!</p>
+          <div class="contact-links">
+            <a href="https://github.com/" target="_blank" class="social-link" id="github-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://linkedin.com/" target="_blank" class="social-link" id="linkedin-link"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="mailto:shivam@email.com" class="social-link" id="email-link"><i class="fas fa-envelope"></i><span>Email</span></a>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal" id="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="send-btn" style="width:100%"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 <span class="gradient-text">Shivam Kumar</span>. All rights reserved.</p>
+      <p class="footer-sub">Built with <i class="fas fa-heart" style="color:#ff6b9d"></i> using HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
