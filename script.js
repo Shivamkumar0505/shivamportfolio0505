@@ -15,17 +15,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+const navbar = document.getElementById('navbar');
+
+function closeMenu() {
+  if (navLinks) navLinks.classList.remove('open');
+}
+
 if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.position = 'absolute';
-    navLinks.style.top = '100%';
-    navLinks.style.left = '0';
-    navLinks.style.right = '0';
-    navLinks.style.background = '#fff';
-    navLinks.style.padding = '1rem';
-    navLinks.style.boxShadow = '0 10px 25px rgba(0,0,0,0.05)';
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+  });
+
+  // Close when a nav link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target)) {
+      closeMenu();
+    }
   });
 }
 
