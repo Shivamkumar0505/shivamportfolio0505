@@ -109,6 +109,8 @@ img { max-width: 100%; display: block; }
   top: 0;
   z-index: 100;
   border-bottom: 1px solid #f1f5f9;
+  /* needed for mobile dropdown positioning */
+  position: relative;
 }
 
 .nav-container {
@@ -385,9 +387,123 @@ img { max-width: 100%; display: block; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .hero-container, .about-grid, .contact-grid { flex-direction: column; }
-  .hero-image { order: -1; margin-bottom: 2rem; }
+  /* Navbar */
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .image-bg-circle { width: 300px; height: 300px; }
+
+  /* Hero */
+  .hero { padding: 2rem 0 3rem; }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+  .hero-cta { justify-content: center; }
+  .hero-info-list { text-align: left; display: inline-block; }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-stats { gap: 1rem; justify-content: center; }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Image */
+  .image-wrapper { width: 280px; height: 280px; }
+  .dot-pattern { width: 100px; height: 100px; }
 }
+
+@media (max-width: 600px) {
+  /* Container padding */
+  .container { padding: 0 1rem; }
+
+  /* Navbar */
+  .navbar { padding: 1rem 0; }
+  .logo { font-size: 1.2rem; }
+  .nav-social { font-size: 0.95rem; }
+  .social-icons { gap: 0.75rem !important; }
+
+  /* Hero */
+  .hero { padding: 1.5rem 0 2.5rem; }
+  .hero-name { font-size: clamp(2rem, 10vw, 3rem); }
+  .hero-typing-wrap { font-size: 1.1rem; }
+  .hero-greeting { font-size: 0.95rem; }
+  .hero-info-list p { font-size: 0.88rem; }
+  .image-wrapper { width: 220px; height: 220px; }
+  .hero-cta { flex-direction: column; gap: 0.75rem; align-items: center; }
+  .btn { padding: 0.7rem 1.4rem; font-size: 0.9rem; }
+
+  /* Section titles */
+  .section-title h2 { font-size: 1.8rem; }
+  .section { padding: 2rem 0; }
+  .section-title { margin-bottom: 1.5rem; }
+
+  /* About */
+  .about-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+  .stat-num { font-size: 1.5rem; }
+
+  /* Skills */
+  .expertise-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .project-img { height: 160px; }
+
+  /* Achievements */
+  .achieve-top { grid-template-columns: 1fr; gap: 1rem; }
+  .achieve-val { font-size: 2rem; }
+  .cert-img-card { width: 260px; }
+  .cert-img-wrap { height: 170px; }
+
+  /* Cert Modal navigation */
+  .cert-modal-prev { left: 0.5rem; }
+  .cert-modal-next { right: 0.5rem; }
+
+  /* Resume/Live */
+  .live-grid { grid-template-columns: 1fr; }
+  .github-stats { grid-template-columns: 1fr 1fr; }
+  .gh-num { font-size: 1.4rem; }
+  .vc-display { font-size: 2.2rem; }
+  .resume-actions { flex-direction: column; gap: 0.75rem; }
+  .resume-actions .btn { width: 100%; justify-content: center; }
+
+  /* CV Modal */
+  .cv-modal-inner { width: 95%; height: 95vh; padding: 0.75rem; }
+
+  /* Contact */
+  .contact-info h3 { font-size: 1.25rem; }
+  .contact-form { gap: 1rem; }
+  .form-group input,
+  .form-group textarea { padding: 0.85rem; font-size: 0.95rem; }
+
+  /* Footer */
+  .footer { padding: 2rem 0; }
+  .footer-container { flex-direction: column; gap: 1.5rem; text-align: center; }
+  .footer-links { text-align: center; }
+  .link-group a { display: inline-block; margin: 0.25rem 0.5rem; }
+
+  /* Nav links open state (mobile menu) */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    z-index: 200;
+  }
+}
+
